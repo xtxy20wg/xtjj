@@ -1,9 +1,11 @@
 <template>
-  <h1>app组件</h1>
+  <route-view>
+    <app-layout></app-layout>
+  </route-view>
 </template>
 
-<script>
-export default {};
+<script setup>
+import AppLayout from "./components/AppLayout.vue";
 </script>
 
 <style></style>
