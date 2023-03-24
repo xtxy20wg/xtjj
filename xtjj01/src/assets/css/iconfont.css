@@ -1,11 +1,13 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3964535 */
-  src: url('iconfont.eot?t=1679302887931'); /* IE9 */
-  src: url('iconfont.eot?t=1679302887931#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('iconfont.woff2?t=1679302887931') format('woff2'),
-       url('iconfont.woff?t=1679302887931') format('woff'),
-       url('iconfont.ttf?t=1679302887931') format('truetype'),
-       url('iconfont.svg?t=1679302887931#iconfont') format('svg');
+  src: url("../iconfont/iconfont.eot?t=1679644784152"); /* IE9 */
+  src: url("../iconfont/iconfont.eot?t=1679644784152#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../iconfont/iconfont.woff2?t=1679644784152")
+      format("woff2"),
+    url("../iconfont/iconfont.woff?t=1679644784152") format("woff"),
+    url("../iconfont/iconfont.ttf?t=1679644784152") format("truetype"),
+    url("../iconfont/iconfont.svg?t=1679644784152#iconfont") format("svg");
 }
 
 .iconfont {
@@ -14,6 +16,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiajiantou:before {
+  content: "\e60a";
 }
 
 .icon-guanzhu:before {
@@ -87,4 +93,3 @@
 .icon-ios:before {
   content: "\e626";
 }
-

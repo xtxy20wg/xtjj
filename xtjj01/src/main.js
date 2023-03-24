@@ -1,5 +1,7 @@
 import { createApp } from "vue";
-import "./assets/css/global.less";
 import App from "./App.vue";
+import "./assets/css/main.css";
+import "./assets/css/iconfont.css";
+const app = createApp(App);
 
-createApp(App).mount("#app");
+app.mount("#app");
