@@ -71,16 +71,23 @@
             <div class="viptext">会员</div>
           </div>
         </li>
-        <li><i class="iconfont icon-lingdang"></i></li>
+        <li class="outmenu">
+          <i class="iconfont icon-lingdang"></i>
+          <ul class="menu">
+            <li><span>评论</span></li>
+            <li><span>赞和收藏</span></li>
+            <li><span>新增粉丝</span></li>
+            <li><span>私信</span></li>
+            <li><span>系统通知</span></li>
+          </ul>
+        </li>
         <li><img src="../assets/image/touxiang.awebp" alt="" class="tx" /></li>
       </ul>
     </div>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script setup></script>
 
 <style lang="less" scoped>
 .outnav {
@@ -126,26 +133,59 @@ export default {};
     .right {
       margin-left: 2rem;
       cursor: pointer;
-      .sousuo {
-        display: inline-block;
-        height: 22px;
-        width: 200px;
-        padding: 2px 0 2px 4px;
-        outline: none;
-        border: 1px solid #c2c8d1;
-        border-radius: 4px;
-        font-size: 10px;
-      }
-      .ss {
-        display: inline-block;
+      li {
         position: relative;
-        text-align: center;
-        line-height: 2rem;
-        top: 2px;
-        left: -39px;
-        width: 36px;
-        height: 22px;
-        background-color: #f2f3f5;
+        .sousuo {
+          display: inline-block;
+          height: 22px;
+          width: 200px;
+          padding: 2px 0 2px 4px;
+          outline: none;
+          border: 1px solid #c2c8d1;
+          border-radius: 4px;
+          font-size: 10px;
+        }
+        .ss {
+          display: inline-block;
+          position: relative;
+          text-align: center;
+          line-height: 2rem;
+          top: 2px;
+          left: -39px;
+          width: 36px;
+          height: 22px;
+          background-color: #f2f3f5;
+        }
+        .menu {
+          position: absolute;
+          top: 46px;
+          left: -100px;
+          display: none;
+          background-color: #fff;
+          box-sizing: border-box;
+          padding: 8px 0;
+          line-height: 2.5rem;
+          border-radius: 6px;
+          box-shadow: 0 0 2rem rgba(81, 87, 103, 0.16);
+          li {
+            width: 9rem;
+            :hover {
+              background-color: #f7f8fa;
+            }
+            span {
+              display: block;
+              padding-left: 5px;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+      .outmenu {
+        &:hover {
+          .menu {
+            display: block;
+          }
+        }
       }
       .more {
         display: flex;
@@ -240,5 +280,8 @@ li {
 }
 .active {
   color: #1e80ff;
+}
+.none {
+  display: none;
 }
 </style>
