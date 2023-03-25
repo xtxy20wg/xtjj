@@ -62,7 +62,7 @@
               <img :src="imgsrc" alt="" />
             </div>
           </div>
-          <ul class="morelist">
+          <ul class="morelist" :class="{ 'none': click }">
             <li>
               <span><i class="iconfont icon-qianbi"></i>写文章</span>
             </li>
@@ -347,6 +347,6 @@ li {
   color: #1e80ff;
 }
 .none {
-  display: none;
+  display: none !important;
 }
 </style>
