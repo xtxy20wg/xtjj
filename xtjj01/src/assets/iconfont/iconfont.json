@@ -6,11 +6,32 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4503762",
+      "name": "铅笔",
+      "font_class": "qianbi",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "20375950",
+      "name": "issue-info问题-信息",
+      "font_class": "feidian",
+      "unicode": "e772",
+      "unicode_decimal": 59250
+    },
+    {
       "icon_id": "13474459",
       "name": "下箭头",
       "font_class": "xiajiantou",
       "unicode": "e60a",
       "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "34751986",
+      "name": "下箭头-copy",
+      "font_class": "xiajiantou-copy",
+      "unicode": "eb63",
+      "unicode_decimal": 60259
     },
     {
       "icon_id": "194679",
@@ -88,13 +109,6 @@
       "font_class": "qianduan",
       "unicode": "e605",
       "unicode_decimal": 58885
-    },
-    {
-      "icon_id": "10032507",
-      "name": "钢笔",
-      "font_class": "gangbi",
-      "unicode": "e726",
-      "unicode_decimal": 59174
     },
     {
       "icon_id": "10378139",

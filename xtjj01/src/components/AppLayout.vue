@@ -58,10 +58,27 @@
         <li>
           <div class="more">
             <input type="button" value="创作者中心" class="btn" />
-            <div class="xjt">
-              <img src="../assets/image/xiajiantou.svg" alt="" />
+            <div class="xjt" @click="changeimg()">
+              <img :src="imgsrc" alt="" />
             </div>
           </div>
+          <ul class="morelist">
+            <li>
+              <span><i class="iconfont icon-qianbi"></i>写文章</span>
+            </li>
+            <li>
+              <span><i class="iconfont icon-feidian"></i>发沸点</span>
+            </li>
+            <li>
+              <span><i class="iconfont icon-biji"></i>写笔记</span>
+            </li>
+            <li>
+              <span><i class="iconfont icon-writecode"></i>写代码</span>
+            </li>
+            <li>
+              <span><i class="iconfont icon-caogao"></i>草稿箱</span>
+            </li>
+          </ul>
         </li>
         <li>
           <div class="vip">
@@ -87,7 +104,20 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+let imgsrc = ref("/static/xiajiantou.svg");
+let click = true;
+function changeimg() {
+  click = !click;
+  if (click) {
+    imgsrc.value = "/static/xiajiantou.svg";
+  } else {
+    imgsrc.value = "/static/shangjiantou.svg";
+  }
+  console.log(click, imgsrc);
+}
+</script>
 
 <style lang="less" scoped>
 .outnav {
@@ -151,10 +181,45 @@
           text-align: center;
           line-height: 2rem;
           top: 2px;
-          left: -39px;
-          width: 36px;
+          left: -37px;
+          width: 34px;
           height: 22px;
           background-color: #f2f3f5;
+        }
+        .morelist {
+          position: absolute;
+          top: 2.8rem;
+          left: -11px;
+          padding: 8px 0;
+          display: block;
+          background-color: #fff;
+          line-height: 2.5rem;
+          box-sizing: border-box;
+          border-radius: 6px;
+          box-shadow: 0 0 2rem rgba(81, 87, 103, 0.16);
+          li {
+            margin: 0 6px;
+            width: 8rem;
+            :hover {
+              background-color: #f7f8fa;
+            }
+            span {
+              i {
+                display: inline-block;
+                padding-top: 1px;
+                padding-right: 8px;
+                text-align: center;
+                line-height: 26px;
+                // color: #515767 !important;
+              }
+              display: block;
+              text-align: center;
+              line-height: 2.5rem;
+              padding-left: 2px;
+              padding-right: 2rem;
+              border-radius: 4px;
+            }
+          }
         }
         .menu {
           position: absolute;
