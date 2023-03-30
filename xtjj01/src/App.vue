@@ -1,13 +1,13 @@
 <template>
   <!-- <AppLogin></AppLogin> -->
   <route-view>
-    <app-layout></app-layout>
+    <app-home></app-home>
   </route-view>
 </template>
 
 <script setup>
 // import AppLogin from "./login/AppLogin.vue";
-import AppLayout from "./components/AppLayout.vue";
+import AppHome from "./page/AppHome.vue";
 </script>
 
 <style></style>
