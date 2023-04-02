@@ -1,5 +1,5 @@
 <template>
-  <div class="outnav">
+  <header class="outnav">
     <div class="nav">
       <ul class="left">
         <!-- <li> -->
@@ -101,7 +101,7 @@
         <li><img src="../assets/image/touxiang.awebp" alt="" class="tx" /></li>
       </ul>
     </div>
-  </div>
+  </header>
 </template>
 
 <script setup>
@@ -130,6 +130,7 @@ function changeimg() {
   color: #515767;
   background-color: #fff;
   border-bottom: 1px solid #f1f1f1;
+  z-index: 250;
   a {
     display: inline-block;
   }
