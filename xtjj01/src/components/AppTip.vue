@@ -54,6 +54,11 @@
     border: 1px solid rgba(30, 128, 255, 0.3);
     background-color: rgba(30, 128, 255, 0.05);
     margin-left: 1px;
+    color: #1171ee;
+    &:hover {
+      background-color: rgba(30, 128, 255, 0.1);
+      border-color: rgba(30, 128, 255, 0.45);
+    }
   }
 }
 </style>
