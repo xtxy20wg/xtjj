@@ -3,50 +3,50 @@
     <div class="nav">
       <ul class="left">
         <!-- <li> -->
-        <route-link
+        <router-link
           ><img
             src="../assets/image/logo.svg"
             alt="稀土掘金的logo"
             class="logo"
-        /></route-link>
+        /></router-link>
         <!-- </li> -->
         <li>
-          <route-link><span class="active">首页</span></route-link>
+          <router-link><span class="active">首页</span></router-link>
         </li>
         <li>
-          <route-link><span>沸点</span></route-link>
+          <router-link><span>沸点</span></router-link>
           <div class="hongkuang">offer快来</div>
         </li>
         <li>
-          <route-link><span>课程</span></route-link>
+          <router-link><span>课程</span></router-link>
         </li>
         <li>
-          <route-link><span>直播</span></route-link>
+          <router-link><span>直播</span></router-link>
         </li>
         <li>
-          <route-link><span>活动</span></route-link>
+          <router-link><span>活动</span></router-link>
         </li>
         <li>
-          <route-link><span>竞赛</span></route-link>
+          <router-link><span>竞赛</span></router-link>
           <div class="hongkuang">码上报名</div>
         </li>
         <li>
-          <route-link><span>商城</span></route-link>
+          <router-link><span>商城</span></router-link>
         </li>
         <li>
-          <route-link><span>APP</span></route-link>
+          <router-link><span>APP</span></router-link>
           <div class="hongkuang">邀请有礼</div>
         </li>
         <li>
-          <route-link><span>插件</span></route-link>
+          <router-link><span>插件</span></router-link>
         </li>
         <!-- <li> -->
-        <route-link
+        <router-link
           ><img
             src="../assets/image/guanggao.awebp"
             alt="稀土掘金广告"
             class="guanggao"
-        /></route-link>
+        /></router-link>
         <!-- </li> -->
       </ul>
       <ul class="right">
@@ -106,6 +106,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+// 给导航栏的创作者中心旁边的下箭头添加点击事件，点击切换上下箭头
 let imgsrc = ref("/static/xiajiantou.svg");
 let click = true;
 function changeimg() {
@@ -118,6 +119,8 @@ function changeimg() {
   console.log(click, imgsrc);
 }
 
+// 给导航栏添加向上隐藏事件，当body滚动值大于366px，导航栏向上隐藏。
+
 let visible = ref(true);
 function handleScroll() {
   var top = Math.floor(
@@ -126,12 +129,14 @@ function handleScroll() {
       window.pageYOffset
   );
 
-  if (top > 66) {
+  if (top > 366) {
     visible.value = false;
   } else {
     visible.value = true;
   }
 }
+
+// 添加body滚动值的监听事件
 onMounted(() => {
   window.addEventListener("scroll", handleScroll, true);
 });

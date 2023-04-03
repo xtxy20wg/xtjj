@@ -1,8 +1,8 @@
 <template>
   <!-- <AppLogin></AppLogin> -->
-  <route-view>
+  <router-view>
     <app-home></app-home>
-  </route-view>
+  </router-view>
 </template>
 
 <script setup>
