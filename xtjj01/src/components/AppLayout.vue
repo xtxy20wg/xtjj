@@ -51,9 +51,11 @@
       </ul>
       <ul class="right">
         <li>
-          <input type="text" placeholder="探索稀土掘金" class="sousuo" /><i
-            class="iconfont icon-sousuo ss"
-          ></i>
+          <form action="">
+            <input type="text" placeholder="探索稀土掘金" class="sousuo" /><i
+              class="iconfont icon-sousuo ss"
+            ></i>
+          </form>
         </li>
         <li>
           <div class="more">
@@ -191,26 +193,31 @@ onMounted(() => {
       cursor: pointer;
       li {
         position: relative;
-        .sousuo {
-          display: inline-block;
-          height: 22px;
-          width: 200px;
-          padding: 2px 0 2px 4px;
-          outline: none;
-          border: 1px solid #c2c8d1;
-          border-radius: 4px;
-          font-size: 10px;
-        }
-        .ss {
-          display: inline-block;
-          position: relative;
-          text-align: center;
-          line-height: 2rem;
-          top: 2px;
-          left: -37px;
-          width: 34px;
-          height: 22px;
-          background-color: #f2f3f5;
+        form {
+          .sousuo {
+            display: inline-block;
+            height: 22px;
+            width: 200px;
+            padding: 2px 0 2px 4px;
+            outline: none;
+            border: 1px solid #c2c8d1;
+            border-radius: 4px;
+            font-size: 10px;
+            &:hover {
+              border: 1px solid #8a919f;
+            }
+          }
+          .ss {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            line-height: 2rem;
+            top: 3px;
+            left: -36px;
+            width: 34px;
+            height: 22px;
+            background-color: #f2f3f5;
+          }
         }
         .morelist {
           position: absolute;

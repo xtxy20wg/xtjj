@@ -76,7 +76,7 @@ export default {};
   box-sizing: border-box;
   padding: 6px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   //   color: #515767;
   cursor: pointer;
   border-radius: 4px;
@@ -85,12 +85,12 @@ export default {};
     display: flex;
     flex-direction: column;
     .list-content {
+      display: flex;
       line-height: 16px;
       padding: 10px 17px;
       border-radius: 4px;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
       vertical-align: middle;
       &:hover {
         color: #1e80ff !important;
