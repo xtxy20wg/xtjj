@@ -1,5 +1,5 @@
 <template>
-  <header class="outnav">
+  <header class="outnav" :class="visible ? 'visible' : ''">
     <div class="nav">
       <ul class="left">
         <!-- <li> -->
@@ -105,7 +105,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 let imgsrc = ref("/static/xiajiantou.svg");
 let click = true;
 function changeimg() {
@@ -117,6 +117,24 @@ function changeimg() {
   }
   console.log(click, imgsrc);
 }
+
+let visible = ref(true);
+function handleScroll() {
+  var top = Math.floor(
+    document.body.scrollTop ||
+      document.documentElement.scrollTop ||
+      window.pageYOffset
+  );
+
+  if (top > 66) {
+    visible.value = false;
+  } else {
+    visible.value = true;
+  }
+}
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll, true);
+});
 </script>
 
 <style lang="less" scoped>
@@ -131,6 +149,8 @@ function changeimg() {
   background-color: #fff;
   border-bottom: 1px solid #f1f1f1;
   z-index: 250;
+  transition: all 0.2s;
+  transform: translate3d(0, -100%, 0);
   a {
     display: inline-block;
   }
@@ -349,5 +369,9 @@ li {
 }
 .none {
   display: none !important;
+}
+
+.visible {
+  transform: translateZ(0);
 }
 </style>

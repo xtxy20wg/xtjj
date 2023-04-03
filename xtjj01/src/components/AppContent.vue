@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <div class="index-nav">
+    <div class="index-nav" :class="height ? 'index-nav-height' : ''">
       <app-menu></app-menu>
     </div>
     <div class="timeline">
@@ -14,8 +14,26 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import AppMenu from "./AppMenu.vue";
 import AppHotlist from "./AppHotlist.vue";
+let height = ref(false);
+function handleScroll() {
+  var top = Math.floor(
+    document.body.scrollTop ||
+      document.documentElement.scrollTop ||
+      window.pageYOffset
+  );
+
+  if (top > 66) {
+    height.value = true;
+  } else {
+    height.value = false;
+  }
+}
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll, true);
+});
 </script>
 
 <style lang="less" scoped>
@@ -25,14 +43,14 @@ import AppHotlist from "./AppHotlist.vue";
   flex-direction: row;
   background-color: #ccc;
   max-width: 930px;
-  min-height: 800px;
+  min-height: 1800px;
   margin: 0 auto;
   margin-top: 5.5rem;
-  // z-index: -1;
   .index-nav {
-    position: static;
-    top: 80px;
+    position: sticky;
+    top: 66px;
     margin-right: 20px;
+    height: fit-content;
   }
   .timeline {
     position: relative;
@@ -49,5 +67,9 @@ import AppHotlist from "./AppHotlist.vue";
       }
     }
   }
+}
+
+.index-nav-height {
+  top: 15px !important;
 }
 </style>

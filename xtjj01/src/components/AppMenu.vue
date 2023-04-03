@@ -80,7 +80,7 @@ export default {};
   //   color: #515767;
   cursor: pointer;
   border-radius: 4px;
-  margin-top: 100px;
+  // margin-top: 100px;
   .list {
     display: flex;
     flex-direction: column;
