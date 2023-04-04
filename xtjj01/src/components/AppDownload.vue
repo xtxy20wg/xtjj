@@ -36,6 +36,10 @@
           color: #252933;
           margin-bottom: 0.33rem;
         }
+
+        .footline {
+          font-size: 10px;
+        }
       }
     }
   }

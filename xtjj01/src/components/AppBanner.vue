@@ -42,7 +42,7 @@
       .label {
         position: absolute;
         right: -14px;
-        bottom: 15px;
+        bottom: -3px;
         height: 36px;
         font-size: 20px;
         z-index: 1;
@@ -58,7 +58,7 @@
         transform: scale(0.4);
         -webkit-transform: scale(0.4);
         &:hover {
-          right: -26px;
+          right: -27px;
           .icon {
             display: inline-block;
             margin-right: 4px;

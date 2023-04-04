@@ -27,7 +27,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 166px;
+    width: 183px;
     .text {
       display: flex;
       flex-direction: column;
@@ -54,7 +54,7 @@
     justify-content: center;
     border: 1px solid rgba(30, 128, 255, 0.3);
     background-color: rgba(30, 128, 255, 0.05);
-    margin-left: 1px;
+    margin-left: 28px;
     color: #1171ee;
     &:hover {
       background-color: rgba(30, 128, 255, 0.1);
