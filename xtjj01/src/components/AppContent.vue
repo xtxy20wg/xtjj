@@ -9,6 +9,9 @@
           <app-hotlist></app-hotlist>
         </div>
       </div>
+      <div class="ContentList">
+        <AppContentList/>
+      </div>
     </div>
   </main>
 </template>
@@ -16,6 +19,7 @@
 <script setup>
 import AppMenu from "./AppMenu.vue";
 import AppHotlist from "./AppHotlist.vue";
+import AppContentList from "./AppContentList.vue";
 </script>
 
 <style lang="less" scoped>
