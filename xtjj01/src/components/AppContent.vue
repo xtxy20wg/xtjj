@@ -12,6 +12,9 @@
     </div>
     <aside>
       <app-tip></app-tip>
+      <app-banner></app-banner>
+      <app-banner></app-banner>
+      <app-download></app-download>
     </aside>
   </main>
 </template>
@@ -21,6 +24,8 @@ import { ref, onMounted } from "vue";
 import AppMenu from "./AppMenu.vue";
 import AppHotlist from "./AppHotlist.vue";
 import AppTip from "./AppTip.vue";
+import AppBanner from "./AppBanner.vue";
+import AppDownload from "./AppDownload.vue";
 // 给主页的侧nav添加粘性布局切换top的侦听事件
 let height = ref(false);
 function handleScroll() {

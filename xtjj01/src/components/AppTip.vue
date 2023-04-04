@@ -21,6 +21,7 @@
   padding: 20px 16px;
   border-radius: 4px;
   background-color: #fff;
+  margin-bottom: 1.66rem;
   .firstline {
     display: flex;
     flex-direction: row;
