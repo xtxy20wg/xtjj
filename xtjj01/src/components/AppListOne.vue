@@ -83,7 +83,7 @@ const ListOneStore = useListOne();
     border-bottom: solid 1px #e4e6eb;
     .text {
       .info-one {
-        color: #86909c;
+        color: #252933;
         font-size: 16px;
       }
       .info-two {
