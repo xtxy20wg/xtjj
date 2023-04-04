@@ -1,59 +1,61 @@
 <template>
-  <header class="outnav">
+  <header class="outnav" :class="visible ? 'visible' : ''">
     <div class="nav">
       <ul class="left">
         <!-- <li> -->
-        <route-link
+        <router-link
           ><img
             src="../assets/image/logo.svg"
             alt="稀土掘金的logo"
             class="logo"
-        /></route-link>
+        /></router-link>
         <!-- </li> -->
         <li>
-          <route-link><span class="active">首页</span></route-link>
+          <router-link><span class="active">首页</span></router-link>
         </li>
         <li>
-          <route-link><span>沸点</span></route-link>
+          <router-link><span>沸点</span></router-link>
           <div class="hongkuang">offer快来</div>
         </li>
         <li>
-          <route-link><span>课程</span></route-link>
+          <router-link><span>课程</span></router-link>
         </li>
         <li>
-          <route-link><span>直播</span></route-link>
+          <router-link><span>直播</span></router-link>
         </li>
         <li>
-          <route-link><span>活动</span></route-link>
+          <router-link><span>活动</span></router-link>
         </li>
         <li>
-          <route-link><span>竞赛</span></route-link>
+          <router-link><span>竞赛</span></router-link>
           <div class="hongkuang">码上报名</div>
         </li>
         <li>
-          <route-link><span>商城</span></route-link>
+          <router-link><span>商城</span></router-link>
         </li>
         <li>
-          <route-link><span>APP</span></route-link>
+          <router-link><span>APP</span></router-link>
           <div class="hongkuang">邀请有礼</div>
         </li>
         <li>
-          <route-link><span>插件</span></route-link>
+          <router-link><span>插件</span></router-link>
         </li>
         <!-- <li> -->
-        <route-link
+        <router-link
           ><img
             src="../assets/image/guanggao.awebp"
             alt="稀土掘金广告"
             class="guanggao"
-        /></route-link>
+        /></router-link>
         <!-- </li> -->
       </ul>
       <ul class="right">
         <li>
-          <input type="text" placeholder="探索稀土掘金" class="sousuo" /><i
-            class="iconfont icon-sousuo ss"
-          ></i>
+          <form action="">
+            <input type="text" placeholder="探索稀土掘金" class="sousuo" /><i
+              class="iconfont icon-sousuo ss"
+            ></i>
+          </form>
         </li>
         <li>
           <div class="more">
@@ -105,7 +107,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+// 给导航栏的创作者中心旁边的下箭头添加点击事件，点击切换上下箭头
 let imgsrc = ref("/static/xiajiantou.svg");
 let click = true;
 function changeimg() {
@@ -117,6 +120,28 @@ function changeimg() {
   }
   console.log(click, imgsrc);
 }
+
+// 给导航栏添加向上隐藏事件，当body滚动值大于366px，导航栏向上隐藏。
+
+let visible = ref(true);
+function handleScroll() {
+  var top = Math.floor(
+    document.body.scrollTop ||
+      document.documentElement.scrollTop ||
+      window.pageYOffset
+  );
+
+  if (top > 366) {
+    visible.value = false;
+  } else {
+    visible.value = true;
+  }
+}
+
+// 添加body滚动值的监听事件
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll, true);
+});
 </script>
 
 <style lang="less" scoped>
@@ -131,6 +156,8 @@ function changeimg() {
   background-color: #fff;
   border-bottom: 1px solid #f1f1f1;
   z-index: 250;
+  transition: all 0.2s;
+  transform: translate3d(0, -100%, 0);
   a {
     display: inline-block;
   }
@@ -166,26 +193,31 @@ function changeimg() {
       cursor: pointer;
       li {
         position: relative;
-        .sousuo {
-          display: inline-block;
-          height: 22px;
-          width: 200px;
-          padding: 2px 0 2px 4px;
-          outline: none;
-          border: 1px solid #c2c8d1;
-          border-radius: 4px;
-          font-size: 10px;
-        }
-        .ss {
-          display: inline-block;
-          position: relative;
-          text-align: center;
-          line-height: 2rem;
-          top: 2px;
-          left: -37px;
-          width: 34px;
-          height: 22px;
-          background-color: #f2f3f5;
+        form {
+          .sousuo {
+            display: inline-block;
+            height: 22px;
+            width: 200px;
+            padding: 2px 0 2px 4px;
+            outline: none;
+            border: 1px solid #c2c8d1;
+            border-radius: 4px;
+            font-size: 10px;
+            &:hover {
+              border: 1px solid #8a919f;
+            }
+          }
+          .ss {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            line-height: 2rem;
+            top: 3px;
+            left: -36px;
+            width: 34px;
+            height: 22px;
+            background-color: #f2f3f5;
+          }
         }
         .morelist {
           position: absolute;
@@ -349,5 +381,9 @@ li {
 }
 .none {
   display: none !important;
+}
+
+.visible {
+  transform: translateZ(0);
 }
 </style>

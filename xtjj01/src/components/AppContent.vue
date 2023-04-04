@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <div class="index-nav">
+    <div class="index-nav" :class="height ? 'index-nav-height' : ''">
       <app-menu></app-menu>
     </div>
     <div class="timeline">
@@ -13,13 +13,44 @@
         <AppContentList/>
       </div>
     </div>
+    <aside>
+      <app-tip></app-tip>
+      <app-banner></app-banner>
+      <app-banner></app-banner>
+      <app-download></app-download>
+    </aside>
   </main>
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import AppMenu from "./AppMenu.vue";
 import AppHotlist from "./AppHotlist.vue";
+
 import AppContentList from "./AppContentList.vue";
+
+import AppTip from "./AppTip.vue";
+import AppBanner from "./AppBanner.vue";
+import AppDownload from "./AppDownload.vue";
+// 给主页的侧nav添加粘性布局切换top的侦听事件
+let height = ref(false);
+function handleScroll() {
+  var top = Math.floor(
+    document.body.scrollTop ||
+      document.documentElement.scrollTop ||
+      window.pageYOffset
+  );
+
+  if (top > 366) {
+    height.value = true;
+  } else {
+    height.value = false;
+  }
+}
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll, true);
+});
+
 </script>
 
 <style lang="less" scoped>
@@ -27,20 +58,22 @@ import AppContentList from "./AppContentList.vue";
   position: relative;
   display: flex;
   flex-direction: row;
-  background-color: #ccc;
+  // background-color: #ccc;
   max-width: 930px;
-  min-height: 800px;
+  min-height: 1800px;
   margin: 0 auto;
   margin-top: 5.5rem;
-  // z-index: -1;
+  font-size: 12px;
   .index-nav {
-    position: static;
-    top: 80px;
+    position: sticky;
+    top: 66px;
     margin-right: 20px;
+    height: fit-content;
   }
   .timeline {
     position: relative;
     width: 47rem;
+    margin-right: 20px;
     .hot {
       display: flex;
       flex-direction: row;
@@ -53,5 +86,9 @@ import AppContentList from "./AppContentList.vue";
       }
     }
   }
+}
+
+.index-nav-height {
+  top: 15px !important;
 }
 </style>
