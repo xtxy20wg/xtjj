@@ -20,6 +20,11 @@
       <app-download></app-download>
       <app-link></app-link>
       <app-more></app-more>
+      <div class="sticky" :class="sky ? 'block' : ''">
+        <app-banner></app-banner>
+        <app-banner></app-banner>
+        <app-download></app-download>
+      </div>
     </aside>
   </main>
 </template>
@@ -36,17 +41,24 @@ import AppLink from "./AppLink.vue";
 import AppMore from "./AppMore.vue";
 // 给主页的侧nav添加粘性布局切换top的侦听事件
 let height = ref(false);
+let sky = ref(false);
 function handleScroll() {
   var top = Math.floor(
     document.body.scrollTop ||
       document.documentElement.scrollTop ||
       window.pageYOffset
   );
-
+  console.log(top);
   if (top > 366) {
     height.value = true;
   } else {
     height.value = false;
+  }
+
+  if (top > 888) {
+    sky.value = true;
+  } else {
+    sky.value = false;
   }
 }
 onMounted(() => {
@@ -61,7 +73,7 @@ onMounted(() => {
   flex-direction: row;
   // background-color: #ccc;
   max-width: 930px;
-  height: auto;
+  height: 1800px;
   margin: 0 auto;
   margin-top: 5.5rem;
   font-size: 12px;
@@ -87,9 +99,22 @@ onMounted(() => {
       }
     }
   }
+
+  aside {
+    .sticky {
+      display: none;
+      position: sticky;
+      top: 20px;
+      transition: all 0.5s;
+    }
+  }
 }
 
 .index-nav-height {
   top: 15px !important;
+}
+
+.block {
+  display: block !important;
 }
 </style>
