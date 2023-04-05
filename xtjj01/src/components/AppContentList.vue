@@ -3,6 +3,8 @@
         <div class="navigate">
           <span class="nav-item  " @click="()=>{tab = 1}" ref="One" :class="tab===1?'active':''">推荐</span>
           <span class="nav-item  "  @click="()=>{tab = 2}" ref="Two" :class="tab===2?'active':''">最新</span>
+            <!-- <router-link to="/Home">首页</router-link>
+            <router-link to="/About">关于</router-link> -->
             <!-- <router-link to=""><span class="nav-item">推荐</span></router-link>
             <router-link ><span class="nav-item">最新</span></router-link> -->
         </div>
@@ -31,19 +33,22 @@
           :cont="arrayCont[item.id]" 
           :timea="arrayTime[item.id]" 
           :smcont="smarrayCont[item.id]"
-          v-show="tab==1" />
+          v-show="tab==1" 
+          />
 
           <AppListTwo   v-for="item in arrayName" :key="index" 
           :data="item" 
           :cont="arrayCont" 
-          v-show="tab==2"></AppListTwo>
+          v-show="tab==2"
+          />
     </div>
 </template>
 
 <script setup>
-import useListOne from "../store/ListOne";
 import { ref } from "vue";
 import { storeToRefs } from "pinia";
+
+import useListOne from "../store/ListOne";
 import AppListOne from "./AppListOne.vue";
 import AppListTwo from "./AppListTwo.vue";
 

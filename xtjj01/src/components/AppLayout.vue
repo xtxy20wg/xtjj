@@ -3,7 +3,7 @@
     <div class="nav">
       <ul class="left">
         <!-- <li> -->
-        <router-link
+        <router-link to=""
           ><img
             src="../assets/image/logo.svg"
             alt="稀土掘金的logo"
@@ -11,37 +11,37 @@
         /></router-link>
         <!-- </li> -->
         <li>
-          <router-link><span class="active">首页</span></router-link>
+          <router-link to=""><span class="active">首页</span></router-link>
         </li>
         <li>
-          <router-link><span>沸点</span></router-link>
+          <router-link to=""><span>沸点</span></router-link>
           <div class="hongkuang">offer快来</div>
         </li>
         <li>
-          <router-link><span>课程</span></router-link>
+          <router-link to=""><span>课程</span></router-link>
         </li>
         <li>
-          <router-link><span>直播</span></router-link>
+          <router-link to=""><span>直播</span></router-link>
         </li>
         <li>
-          <router-link><span>活动</span></router-link>
+          <router-link to=""><span>活动</span></router-link>
         </li>
         <li>
-          <router-link><span>竞赛</span></router-link>
+          <router-link to=""><span>竞赛</span></router-link>
           <div class="hongkuang">码上报名</div>
         </li>
         <li>
-          <router-link><span>商城</span></router-link>
+          <router-link to=""><span>商城</span></router-link>
         </li>
         <li>
-          <router-link><span>APP</span></router-link>
+          <router-link to=""><span>APP</span></router-link>
           <div class="hongkuang">邀请有礼</div>
         </li>
         <li>
-          <router-link><span>插件</span></router-link>
+          <router-link to=""><span>插件</span></router-link>
         </li>
         <!-- <li> -->
-        <router-link
+        <router-link to=""
           ><img
             src="../assets/image/guanggao.awebp"
             alt="稀土掘金广告"
