@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="ContentList">
-        <AppContentList/>
+        <AppContentList />
       </div>
     </div>
     <aside>
@@ -18,6 +18,8 @@
       <app-banner></app-banner>
       <app-banner></app-banner>
       <app-download></app-download>
+      <app-link></app-link>
+      <app-more></app-more>
     </aside>
   </main>
 </template>
@@ -26,12 +28,12 @@
 import { ref, onMounted } from "vue";
 import AppMenu from "./AppMenu.vue";
 import AppHotlist from "./AppHotlist.vue";
-
 import AppContentList from "./AppContentList.vue";
-
 import AppTip from "./AppTip.vue";
 import AppBanner from "./AppBanner.vue";
 import AppDownload from "./AppDownload.vue";
+import AppLink from "./AppLink.vue";
+import AppMore from "./AppMore.vue";
 // 给主页的侧nav添加粘性布局切换top的侦听事件
 let height = ref(false);
 function handleScroll() {
@@ -50,7 +52,6 @@ function handleScroll() {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll, true);
 });
-
 </script>
 
 <style lang="less" scoped>
@@ -60,7 +61,7 @@ onMounted(() => {
   flex-direction: row;
   // background-color: #ccc;
   max-width: 930px;
-  min-height: 1800px;
+  height: auto;
   margin: 0 auto;
   margin-top: 5.5rem;
   font-size: 12px;

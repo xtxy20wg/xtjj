@@ -56,6 +56,7 @@
     background-color: rgba(30, 128, 255, 0.05);
     margin-left: 28px;
     color: #1171ee;
+    cursor: pointer;
     &:hover {
       background-color: rgba(30, 128, 255, 0.1);
       border-color: rgba(30, 128, 255, 0.45);

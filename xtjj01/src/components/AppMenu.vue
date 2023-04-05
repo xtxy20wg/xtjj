@@ -92,6 +92,7 @@ export default {};
       flex-direction: row;
       align-items: center;
       vertical-align: middle;
+      min-width: 7rem;
       &:hover {
         color: #1e80ff !important;
         background-color: #f7f8fa;
