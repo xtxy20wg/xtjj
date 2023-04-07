@@ -1,9 +1,12 @@
 <template>
-  <div class="banner-block">
+  <div class="banner-block" :class="close ? 'none' : ''">
     <div class="banner">
       <img src="../assets/image/guanggao1.webp" alt="" />
       <div class="ctrl-box">
-        <img src="../assets/image/close.png" alt="" />
+        <div class="" @click="closefn()">
+          <img src="../assets/image/close.png" alt="" />
+        </div>
+
         <span class="label">
           <span class="icon none">投放</span>
           <span>广告</span>
@@ -13,7 +16,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+let close = ref(false);
+function closefn() {
+  close.value = true;
+  console.log(close);
+}
+</script>
 
 <style lang="less" scoped>
 .banner-block {
@@ -27,6 +37,7 @@
     cursor: pointer;
     height: 100px;
     img {
+      display: block;
       height: 100px;
     }
 
