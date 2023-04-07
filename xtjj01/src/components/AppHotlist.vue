@@ -5,25 +5,25 @@
         <img src="../assets/image/zonghewenzhangbang.png" alt="" />
         <span>综合文章榜</span>
       </div>
-      <router-link><span>更多></span></router-link>
+      <router-link to=""><span>更多></span></router-link>
     </div>
     <ul>
       <div class="content">
         <li>
           <div class="index">1</div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>睡后收入(无人直播)</span>
           </router-link>
         </li>
         <li>
           <div class="index">2</div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>预测2024年之后的前端开发模式</span>
           </router-link>
         </li>
         <li>
           <div class="index">3</div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>Xcode 中 Swift Package Manager 速度慢</span>
           </router-link>
         </li>
@@ -36,25 +36,25 @@
         <img src="../assets/image/jingxuanzhuanlanbang.png" alt="" />
         <span>精选专栏榜</span>
       </div>
-      <router-link><span>更多></span></router-link>
+      <router-link to=""><span>更多></span></router-link>
     </div>
     <ul>
       <div class="content">
         <li>
           <div class="dot1 size"></div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>从零到无穷大 —— 移动开发工程师的升级打怪之路</span>
           </router-link>
         </li>
         <li>
           <div class="dot2 size"></div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>让我们一起Golang</span>
           </router-link>
         </li>
         <li>
           <div class="dot3 size"></div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>《SpringBoot零基础入门》</span>
           </router-link>
         </li>
@@ -67,25 +67,25 @@
         <img src="../assets/image/tuijianshoucangji.png" alt="" />
         <span>推荐收藏集</span>
       </div>
-      <router-link><span>更多></span></router-link>
+      <router-link to=""><span>更多></span></router-link>
     </div>
     <ul>
       <div class="content">
         <li>
           <div class="dot1 size"></div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>超级经典的，每日必看的</span>
           </router-link>
         </li>
         <li>
           <div class="dot2 size"></div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>Flutter专题</span>
           </router-link>
         </li>
         <li>
           <div class="dot3 size"></div>
-          <router-link class="hidden">
+          <router-link to="" class="hidden">
             <span>数据可视化</span>
           </router-link>
         </li>
@@ -208,6 +208,7 @@ li {
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
+  color: #252933;
   :hover {
     color: #1e80ff;
   }

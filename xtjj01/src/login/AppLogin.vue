@@ -6,7 +6,6 @@
                     <a href="">稀土掘金</a>
                 </div>
         </div>
-      
         <div class="dowebok " id="dowebok" :class="{rightPanelActive : state.isActive}">
             <!-- 注册 -->
             <div class="form-container sign-up" >
@@ -19,7 +18,6 @@
                     <input type="email" id="email"  name="email"  placeholder="请输入正确的邮箱格式">
                     <input type="text" id="birth" name="birth" placeholder="出生日期 以YYYY-MM-DD格式" />
                     <input type="text" id="phone" name="phone" placeholder="手机号码" />
-                    <input type="text" id="address" name="address" placeholder="收货地址" />
                     <button>注册</button>
                 </form>
             </div>
@@ -65,7 +63,6 @@ const state = reactive({
 
 function ChangeStyle() {
   state.isActive = !state.isActive;
-  // console.log(state.isActive);
 }
 </script >
 

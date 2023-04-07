@@ -1,12 +1,11 @@
 <template>
-  <!-- <AppLogin></AppLogin> -->
-  <router-view>
-    <app-home></app-home>
-  </router-view>
+    <router-view>
+      <!-- 暂时位于home下 -->
+      <AppHome/>
+    </router-view>
 </template>
 
 <script setup>
-// import AppLogin from "./login/AppLogin.vue";
 import AppHome from "./page/AppHome.vue";
 </script>
 
