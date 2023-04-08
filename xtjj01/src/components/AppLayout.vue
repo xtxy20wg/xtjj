@@ -100,8 +100,99 @@
             <li><span>系统通知</span></li>
           </ul>
         </li>
+<<<<<<< HEAD
         <li><img src="../assets/image/touxiang.awebp" alt="" class="tx" /></li>
         
+=======
+        <li>
+          <img
+            src="../assets/image/touxiang.awebp"
+            alt=""
+            class="tx"
+            @click="dropdownfn"
+          />
+          <div class="dropdown-menu" :class="dropdown ? '' : 'none'">
+            <div class="user">
+              <div class="avatar">
+                <img src="../assets/image/touxiang.awebp" alt="" />
+              </div>
+              <div class="detail">
+                <span class="top">蔡plus</span>
+                <span class="bottom">矿石 <span>1.0w ></span></span>
+              </div>
+            </div>
+            <div class="process">
+              <div class="jscore">
+                <div class="level">掘友等级<span>JY.4</span></div>
+                <div class="js-level">
+                  <span>273.5 / 500 ></span>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="current-bar"></div>
+              </div>
+            </div>
+            <ul class="action">
+              <li>
+                <div class="out">
+                  <div class="count">0</div>
+                  <div class="name">关注</div>
+                </div>
+              </li>
+              <li>
+                <div class="out">
+                  <div class="count">2</div>
+                  <div class="name">赞过</div>
+                </div>
+              </li>
+              <li>
+                <div class="out">
+                  <div class="count">16</div>
+                  <div class="name">收藏</div>
+                </div>
+              </li>
+            </ul>
+            <ul class="dropdown-list">
+              <li>
+                <i class="iconfont icon-zhuye"></i>
+                <span>我的主页</span>
+              </li>
+              <li>
+                <i class="iconfont icon-fuli"></i>
+                <span>成长福利</span>
+              </li>
+              <li>
+                <i class="iconfont icon-shannianbiji"></i>
+                <span>闪念笔记</span>
+              </li>
+              <li>
+                <i class="iconfont icon-huiyuan"></i>
+                <span>会员中心</span>
+              </li>
+              <li>
+                <i class="iconfont icon-kecheng"></i>
+                <span>课程中心</span>
+              </li>
+              <li>
+                <i class="iconfont icon-youhui"></i>
+                <span>我的优惠</span>
+              </li>
+              <li>
+                <i class="iconfont icon-baoming"></i>
+                <span>我的报名</span>
+              </li>
+              <li>
+                <i class="iconfont icon-zuji"></i>
+                <span>我的足迹</span>
+              </li>
+            </ul>
+            <div class="group">
+              <span>我的设置</span>
+              <span>退出登录</span>
+            </div>
+          </div>
+        </li>
+>>>>>>> b97f7227fc9aafacc80ad7fbc78563cd25c638a2
       </ul>
     </div>
   </header>
@@ -119,7 +210,6 @@ function changeimg() {
   } else {
     imgsrc.value = "/static/shangjiantou.svg";
   }
-  console.log(click, imgsrc);
 }
 
 // 给导航栏添加向上隐藏事件，当body滚动值大于366px，导航栏向上隐藏。
@@ -143,6 +233,12 @@ function handleScroll() {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll, true);
 });
+
+// 给头像添加点击事件，控制dropdown的显示与隐藏
+let dropdown = ref(false);
+function dropdownfn() {
+  dropdown.value = !dropdown.value;
+}
 </script>
 
 <style lang="less" scoped>
@@ -153,7 +249,6 @@ onMounted(() => {
   right: 0;
   width: 100%;
   height: 4rem;
-  color: #515767;
   background-color: #fff;
   border-bottom: 1px solid #f1f1f1;
   z-index: 250;
@@ -176,6 +271,9 @@ onMounted(() => {
         position: relative;
         border: 1px solid transparent;
         border-left: none;
+        span {
+          color: #515767;
+        }
         &:hover {
           border-bottom: 1px solid #1e80ff;
           color: #333;
@@ -329,6 +427,163 @@ onMounted(() => {
     }
   }
 }
+
+.dropdown-menu {
+  box-shadow: 0 0 24px rgba(81, 87, 103, 0.16);
+  background-color: #fff;
+  border: 1px solid #e4e6eb;
+  border-radius: 4px;
+  position: absolute;
+  padding: 15px;
+  left: -15rem;
+  .user {
+    position: relative;
+    display: flex;
+    margin-bottom: 1rem;
+    .avatar {
+      position: relative;
+      margin-right: 1rem;
+      height: 3rem;
+      img {
+        display: inline-block;
+        border-radius: 50%;
+        width: 3rem;
+      }
+    }
+
+    .detail {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 11rem;
+      line-height: 18px;
+      .bottom {
+        font-size: 10px;
+      }
+      .top {
+        font-size: 13px;
+        color: #252933;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+          color: #515767;
+        }
+      }
+    }
+  }
+
+  .process {
+    position: relative;
+    color: #1e80ff;
+    border-radius: 4px;
+    background-color: pink;
+    padding: 6px 8px 8px;
+    background: url(../assets/image/dropdownbj.png) no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 1rem;
+
+    .jscore {
+      display: flex;
+      margin-bottom: 4px;
+      justify-content: space-between;
+      line-height: 18px;
+      font-size: 10px;
+      .level {
+        span {
+          margin-left: 4px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .bar {
+      position: relative;
+      height: 5px;
+      border-radius: 4px;
+      background-color: rgba(30, 128, 255, 0.2);
+      .current-bar {
+        height: 100%;
+        width: 60%;
+        background-color: #1e80ff;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  .action {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgba(228, 230, 235, 0.5);
+    padding-bottom: 12px;
+    margin-bottom: 5px;
+    line-height: 18px;
+
+    li {
+      .out {
+        text-align: center;
+        color: #252933;
+        .count {
+        }
+
+        .name {
+          font-size: 10px;
+          color: #8a919f;
+        }
+      }
+    }
+  }
+
+  .dropdown-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(228, 230, 235, 0.5);
+    padding-bottom: 8px;
+    box-sizing: border-box;
+
+    li {
+      .iconfont {
+        margin: 0 8px;
+        position: relative;
+      }
+      display: flex;
+      align-items: center;
+      line-height: 40px;
+      color: #252933;
+      margin: 0;
+      padding: 0 10px 0 0;
+
+      &:hover {
+        background-color: #f7f8fa;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 10px;
+    line-height: 1.5rem;
+    color: #8a919f;
+
+    span {
+      &:hover {
+        color: #1e80ff;
+      }
+    }
+  }
+}
+
 .tx {
   width: 2.5rem;
   height: 2.5rem;
@@ -378,7 +633,7 @@ li {
   color: #8a919f;
 }
 .active {
-  color: #1e80ff;
+  color: #1e80ff !important;
 }
 .none {
   display: none !important;

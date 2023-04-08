@@ -208,6 +208,7 @@ li {
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
+  color: #252933;
   :hover {
     color: #1e80ff;
   }

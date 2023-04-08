@@ -64,25 +64,6 @@
 </template>
 
 <script setup>
-// import { onMounted, reactive } from "vue";
-// const active = reactive({
-//   x: 0,
-//   y: 0,
-//   click(e) {
-//     // active.x = e.layerX;
-//     // active.y = e.layerY;
-//     const list = document.getElementsByClassName("list");
-//     var i = 0;
-//     //
-//     for (i; i < list.length; i++) {
-//       list[i].style.backgroundColor = " #FFFFFF";
-//     }
-//     e.target.parentElement.style.backgroundColor = "#eaf2ff";
-//   }
-// });
-// onMounted(() => {
-//   window.addEventListener("click", active.click);
-// });
 </script>
 
 <style lang="less" scoped>

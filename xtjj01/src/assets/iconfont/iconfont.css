@@ -1,11 +1,11 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3964535 */
-  src: url('../iconfont/iconfont.eot?t=1680167944230'); /* IE9 */
-  src: url('../iconfont/iconfont.eot?t=1680167944230#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../iconfont/iconfont.woff2?t=1680167944230') format('woff2'),
-       url('../iconfont/iconfont.woff?t=1680167944230') format('woff'),
-       url('../iconfont/iconfont.ttf?t=1680167944230') format('truetype'),
-       url('../iconfont/iconfont.svg?t=1680167944230#iconfont') format('svg');
+  src: url('../iconfont/iconfont.eot?t=1680859010423'); /* IE9 */
+  src: url('../iconfont/iconfont.eot?t=1680859010423#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../iconfont/iconfont.woff2?t=1680859010423') format('woff2'),
+       url('../iconfont/iconfont.woff?t=1680859010423') format('woff'),
+       url('../iconfont/iconfont.ttf?t=1680859010423') format('truetype'),
+       url('../iconfont/iconfont.svg?t=1680859010423#iconfont') format('svg');
 }
 
 .iconfont {
@@ -14,6 +14,38 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shannianbiji:before {
+  content: "\e6c1";
+}
+
+.icon-fuli:before {
+  content: "\e600";
+}
+
+.icon-zhuye:before {
+  content: "\e8c8";
+}
+
+.icon-youhui:before {
+  content: "\e884";
+}
+
+.icon-baoming:before {
+  content: "\e806";
+}
+
+.icon-zuji:before {
+  content: "\e729";
+}
+
+.icon-huiyuan:before {
+  content: "\e696";
+}
+
+.icon-kecheng:before {
+  content: "\e620";
 }
 
 .icon-qianbi:before {
