@@ -100,14 +100,20 @@ const smarrayCont = smcontent.value;
   }
   .maina {
     //
-    padding: 0rem 2rem;
+    padding: 0rem 2rem; 
+    &:hover {
+          cursor: pointer;
+          background-color: #fafafa;
+        }
     .metaContainer {
       display: flex;
       margin: 7px 1px;
       font-size: 1rem;
+     
       .author {
         &:hover {
           color: #007fff;
+          cursor: pointer;
         }
       }
     }

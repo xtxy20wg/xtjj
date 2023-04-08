@@ -3,8 +3,8 @@
     <div class="nav">
       <ul class="left">
         <!-- <li> -->
-        <router-link to=""
-          ><img
+        <router-link to="">
+          <img
             src="../assets/image/logo.svg"
             alt="稀土掘金的logo"
             class="logo"
@@ -101,6 +101,7 @@
           </ul>
         </li>
         <li><img src="../assets/image/touxiang.awebp" alt="" class="tx" /></li>
+        
       </ul>
     </div>
   </header>
