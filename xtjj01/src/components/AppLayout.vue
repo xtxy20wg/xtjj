@@ -3,11 +3,8 @@
     <div class="nav">
       <ul class="left">
         <!-- <li> -->
-        <router-link to=""
-          ><img
-            src="../assets/image/logo.svg"
-            alt="稀土掘金的logo"
-            class="logo"
+        <router-link to="">
+          <img src="../assets/image/logo.svg" alt="稀土掘金的logo" class="logo"
         /></router-link>
         <!-- </li> -->
         <li>
@@ -523,8 +520,6 @@ function dropdownfn() {
       .out {
         text-align: center;
         color: #252933;
-        .count {
-        }
 
         .name {
           font-size: 10px;

@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
-    <div class="list">
-      <div class="list-content active">
+    <div class="list active">
+      <div class="list-content ">
         <i class="iconfont icon-guanzhu"></i>
         <span>关注</span>
       </div>
@@ -63,8 +63,7 @@
   </nav>
 </template>
 
-<script>
-export default {};
+<script setup>
 </script>
 
 <style lang="less" scoped>
