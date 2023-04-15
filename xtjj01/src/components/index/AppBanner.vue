@@ -1,10 +1,10 @@
 <template>
   <div class="banner-block" :class="close ? 'none' : ''">
     <div class="banner">
-      <img src="../assets/image/guanggao1.webp" alt="" />
+      <img src="../../assets/image/guanggao1.webp" alt="" />
       <div class="ctrl-box">
         <div class="" @click="closefn()">
-          <img src="../assets/image/close.png" alt="" />
+          <img src="../../assets/image/close.png" alt="" />
         </div>
 
         <span class="label">

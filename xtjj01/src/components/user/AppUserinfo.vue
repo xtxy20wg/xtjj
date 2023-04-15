@@ -1,22 +1,22 @@
 <template>
   <div class="userinfo">
-    <img src="../assets/image/touxiang.awebp" alt="" class="tx" />
+    <img src="../../assets/image/touxiang.awebp" alt="" class="tx" />
     <div class="info-box">
       <div class="top">
         <h2><span>用户1</span></h2>
       </div>
       <div class="usericon">
         <span class="rank">
-          <img src="../assets/image/userinfoimg/rank.awebp" alt="" />
+          <img src="../../assets/image/userinfoimg/rank.awebp" alt="" />
         </span>
         <span class="level">
-          <img src="../assets/image/userinfoimg/level.svg" alt="" />
+          <img src="../../assets/image/userinfoimg/level.svg" alt="" />
         </span>
         <div class="vip">
-          <img src="../assets/image/userinfoimg/uservipsvg.svg" alt="" />
+          <img src="../../assets/image/userinfoimg/uservipsvg.svg" alt="" />
         </div>
         <img
-          src="../assets/image/userinfoimg/huizhang.awebp"
+          src="../../assets/image/userinfoimg/huizhang.awebp"
           alt=""
           class="huizhang"
         />
@@ -35,12 +35,14 @@
   <div class="wall">
     <div class="warp">
       <div class="bleft">
-        <img src="../assets/image/userinfoimg/count.png" alt="" />
+        <img src="../../assets/image/userinfoimg/count.png" alt="" />
         <div class="">获得徽章 1</div>
       </div>
       <ul class="list">
-        <li><img src="../assets/image/userinfoimg/huizhang.awebp" alt="" /></li>
-        <img src="../assets/image/userinfoimg/right.svg" alt="" />
+        <li>
+          <img src="../../assets/image/userinfoimg/huizhang.awebp" alt="" />
+        </li>
+        <img src="../../assets/image/userinfoimg/right.svg" alt="" />
       </ul>
     </div>
   </div>

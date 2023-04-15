@@ -2,23 +2,23 @@
   <div class="link-block">
     <ul>
       <li>
-        <img src="../assets/image/xtjjmini.png" alt="" />
+        <img src="../../assets/image/xtjjmini.png" alt="" />
         <span>稀土掘金漫游指南</span>
       </li>
       <li>
-        <img src="../assets/image/chrome.png" alt="" />
+        <img src="../../assets/image/chrome.png" alt="" />
         <span>掘金浏览器插件</span>
       </li>
       <li>
-        <img src="../assets/image/translation.png" alt="" />
+        <img src="../../assets/image/translation.png" alt="" />
         <span>掘金翻译计划</span>
       </li>
       <li>
-        <img src="../assets/image/weibo.png" alt="" />
+        <img src="../../assets/image/weibo.png" alt="" />
         <span>官方微博</span>
       </li>
       <li>
-        <img src="../assets/image/wechat.png" alt="" />
+        <img src="../../assets/image/wechat.png" alt="" />
         <span>微信公众号</span>
       </li>
     </ul>

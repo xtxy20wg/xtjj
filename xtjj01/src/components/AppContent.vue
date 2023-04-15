@@ -31,14 +31,14 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import AppMenu from "./AppMenu.vue";
-import AppHotlist from "./AppHotlist.vue";
+import AppMenu from "./index/AppMenu.vue";
+import AppHotlist from "./index/AppHotlist.vue";
 import AppContentList from "./AppContentList.vue";
-import AppTip from "./AppTip.vue";
-import AppBanner from "./AppBanner.vue";
-import AppDownload from "./AppDownload.vue";
-import AppLink from "./AppLink.vue";
-import AppMore from "./AppMore.vue";
+import AppTip from "./index/AppTip.vue";
+import AppBanner from "./index/AppBanner.vue";
+import AppDownload from "./index/AppDownload.vue";
+import AppLink from "./index/AppLink.vue";
+import AppMore from "./index/AppMore.vue";
 // 给主页的侧nav添加粘性布局切换top的侦听事件
 let height = ref(false);
 let sky = ref(false);

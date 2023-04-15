@@ -18,8 +18,8 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import AppLayout from "../components/AppLayout.vue";
-import AppUserinfo from "../components/AppUserinfo.vue";
-import AppAchievement from "../components/AppAchievement.vue";
+import AppUserinfo from "../components/user/AppUserinfo.vue";
+import AppAchievement from "../components/user/AppAchievement.vue";
 import AppBubble from "../components/AppBubble.vue";
 let height = ref(false);
 function handleScroll() {
