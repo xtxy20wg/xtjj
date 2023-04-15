@@ -51,7 +51,7 @@
 <style lang="less" scoped>
 .userinfo {
   display: flex;
-  padding: 2.5rem;
+  padding: 2.3rem;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -113,6 +113,7 @@
         display: flex;
         position: relative;
         margin-left: 4px;
+        margin-top: 3px;
         img {
           width: 14px;
           height: 14px;
@@ -121,7 +122,7 @@
       .huizhang {
         width: 20px;
         height: 20px;
-        margin-left: 0.667rem;
+        margin-left: 0.267rem;
       }
     }
     .interduction {
@@ -168,6 +169,7 @@
   font-weight: 400;
   color: #1d2129;
   padding: 0 2.5rem;
+  margin-bottom: 1rem;
   .warp {
     display: flex;
     height: 90%;
