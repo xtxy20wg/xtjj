@@ -1,5 +1,31 @@
 <template>
   <AppLayout />
+  <div class="mask" v-if="mask"></div>
+  <div class="changepwd" v-if="mask">
+    <div class="pwdtitle">更改密码</div>
+    <div class="pwdform">
+      <form action="">
+        <div class="pwd">
+          <span>原密码:</span>
+          <input type="text" name="oldpwd" placeholder="请输入密码" />
+        </div>
+        <div class="pwd">
+          <span>新密码:</span>
+          <input type="text" name="newpwd" placeholder="请输入新密码" />
+        </div>
+        <div class="pwd">
+          <span>确认密码:</span
+          ><input type="text" name="surepwd" placeholder="请再次输入新密码" />
+        </div>
+        <div class="pwdbottom">
+          <button class="pwdbutton">重置</button>
+          <button class="pwdbutton sub" @click.prevent="changemask">
+            提交
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
   <div class="main">
     <nav class="backuser">
       <li>
@@ -221,11 +247,14 @@
                   <label for="">密码</label>
                   <div class="content">
                     <div class="text-out">
-                      <button class="setpwd">更改密码</button>
+                      <button class="setpwd" @click.prevent="changemask">
+                        更改密码
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div class="divide"></div>
+                <button @click.prevent="" class="submit">保存修改</button>
               </form>
             </div>
             <div class="avatar"></div>
@@ -237,20 +266,112 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import AppLayout from "../components/AppLayout.vue";
+
+// 创建遮蔽层变量mask
+let mask = ref(false);
+function changemask() {
+  mask.value = !mask.value;
+}
 </script>
 
 <style lang="less" scoped>
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+  z-index: 10;
+}
+
+.changepwd {
+  position: fixed;
+  width: 40rem;
+  height: 22.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  z-index: 11;
+  .pwdtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eaeaea;
+    background-color: rgb(123, 185, 255);
+    color: #fff;
+  }
+
+  .pwdform {
+    padding: 2rem 1rem;
+    form {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      height: 100%;
+      //   background-color: pink;
+      .pwd {
+        line-height: 4rem;
+        height: 4rem;
+        width: 80%;
+        font-size: 14px;
+        padding: 0 2rem;
+        border-bottom: 1px solid #dddee0;
+        span {
+          display: inline-block;
+          width: 6rem;
+        }
+        input {
+          border: 1px solid #4e5969;
+          border-radius: 4px;
+          height: 2rem;
+          width: 60%;
+          font-size: 13px;
+          padding: 4px;
+        }
+      }
+
+      .pwdbottom {
+        display: flex;
+        justify-content: space-between;
+        width: 94%;
+        .pwdbutton {
+          margin-top: 1rem;
+          color: #007fff;
+          padding: 0;
+          height: 2.3rem;
+          font-weight: 500;
+          border: 1px solid #007fff;
+          background-color: #fff;
+          border-radius: 4px;
+          width: 8rem;
+          cursor: pointer;
+        }
+        .sub {
+          background-color: #007fff;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 .main {
   position: relative;
   margin: 0 auto;
-  margin-top: 5.5rem;
+  padding-top: 3.5rem;
   width: 100%;
   max-width: 80rem;
+  height: auto;
 
   .backuser {
     position: sticky;
-    top: 5rem;
+    top: 4rem;
     width: 100%;
     height: 3.833rem;
     display: flex;
@@ -262,9 +383,11 @@ import AppLayout from "../components/AppLayout.vue";
     transition: all 0.2s;
     transform: translateZ(0);
     padding-left: 2rem;
+    z-index: 5;
     li {
       font-size: 13px;
       color: #909090;
+      cursor: pointer;
 
       .byte-icon {
         width: 1rem !important;
@@ -426,9 +549,21 @@ import AppLayout from "../components/AppLayout.vue";
                       background-color: #fff;
                       border-radius: 4px;
                       width: 8rem;
+                      cursor: pointer;
                     }
                   }
                 }
+              }
+              .submit {
+                margin-top: 1.2rem;
+                margin-left: 7.5rem;
+                padding: 0.6rem 1.5rem;
+                background-color: #1d7dfa;
+                color: #fff;
+                box-sizing: border-box;
+                font-size: 13px;
+                border: none;
+                cursor: pointer;
               }
             }
           }
