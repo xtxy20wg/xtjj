@@ -21,7 +21,6 @@ import { ref } from "vue";
 let close = ref(false);
 function closefn() {
   close.value = true;
-  console.log(close);
 }
 </script>
 

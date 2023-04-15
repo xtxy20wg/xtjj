@@ -48,7 +48,6 @@ function handleScroll() {
       document.documentElement.scrollTop ||
       window.pageYOffset
   );
-  console.log(top);
   if (top > 366) {
     height.value = true;
   } else {
