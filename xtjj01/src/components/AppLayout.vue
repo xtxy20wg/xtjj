@@ -100,10 +100,10 @@
             <li><span>系统通知</span></li>
           </ul>
         </li>
-<<<<<<< HEAD
+
         <li><img src="../assets/image/touxiang.awebp" alt="" class="tx" /></li>
         
-=======
+
         <li>
           <img
             src="../assets/image/touxiang.awebp"
@@ -192,7 +192,7 @@
             </div>
           </div>
         </li>
->>>>>>> b97f7227fc9aafacc80ad7fbc78563cd25c638a2
+
       </ul>
     </div>
   </header>

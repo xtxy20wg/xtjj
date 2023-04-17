@@ -1,11 +1,12 @@
 <template>
     <router-view>
-      <!-- 暂时位于home下 -->
-      <AppHome/>
+        <!-- <AppForpassword></AppForpassword> -->
     </router-view>
 </template>
 
 <script setup>
+import AppForpassword from "./login/AppForpassword.vue";
+import AppLogin from "./login/AppLogin.vue";
 import AppHome from "./page/AppHome.vue";
 </script>
 

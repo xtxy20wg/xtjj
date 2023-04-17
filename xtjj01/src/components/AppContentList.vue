@@ -3,6 +3,15 @@
         <div class="navigate">
           <span class="nav-item  " @click="()=>{tab = 1}" ref="One" :class="tab===1?'active':''">推荐</span>
           <span class="nav-item  "  @click="()=>{tab = 2}" ref="Two" :class="tab===2?'active':''">最新</span>
+          <!-- <router-link class="nav-item" 
+          :to="{
+            name:'Listnoe'
+          }">推荐</router-link>
+          <router-link  class="nav-item"
+          :to="{
+            name:'Listtwo'
+          }">最新</router-link> -->
+
             <!-- <router-link to="/Home">首页</router-link>
             <router-link to="/About">关于</router-link> -->
             <!-- <router-link to=""><span class="nav-item">推荐</span></router-link>
@@ -35,12 +44,13 @@
           :smcont="smarrayCont[item.id]"
           v-show="tab==1" 
           />
-
+            
           <AppListTwo   v-for="item in arrayName" :key="index" 
           :data="item" 
           :cont="arrayCont" 
           v-show="tab==2"
           />
+          <router-view></router-view>
     </div>
 </template>
 

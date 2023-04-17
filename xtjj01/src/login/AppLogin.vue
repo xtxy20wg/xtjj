@@ -16,7 +16,6 @@
                     <input type="password" id="pwd" name="password" placeholder="请输入密码" />
                     <input type="password" id="second_pwd" name="second_pwd" placeholder="请再次输入密码" />
                     <input type="email" id="email"  name="email"  placeholder="请输入正确的邮箱格式">
-                    <input type="text" id="birth" name="birth" placeholder="出生日期 以YYYY-MM-DD格式" />
                     <input type="text" id="phone" name="phone" placeholder="手机号码" />
                     <button>注册</button>
                 </form>
