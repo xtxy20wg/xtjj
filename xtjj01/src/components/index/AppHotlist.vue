@@ -2,7 +2,7 @@
   <div class="hotlist">
     <div class="top">
       <div class="left">
-        <img src="../assets/image/zonghewenzhangbang.png" alt="" />
+        <img src="../../assets/image/zonghewenzhangbang.png" alt="" />
         <span>综合文章榜</span>
       </div>
       <router-link to=""><span>更多></span></router-link>
@@ -33,7 +33,7 @@
   <div class="hotlist">
     <div class="top">
       <div class="left">
-        <img src="../assets/image/jingxuanzhuanlanbang.png" alt="" />
+        <img src="../../assets/image/jingxuanzhuanlanbang.png" alt="" />
         <span>精选专栏榜</span>
       </div>
       <router-link to=""><span>更多></span></router-link>
@@ -64,7 +64,7 @@
   <div class="hotlist">
     <div class="top">
       <div class="left">
-        <img src="../assets/image/tuijianshoucangji.png" alt="" />
+        <img src="../../assets/image/tuijianshoucangji.png" alt="" />
         <span>推荐收藏集</span>
       </div>
       <router-link to=""><span>更多></span></router-link>

@@ -2,7 +2,7 @@
   <div class="download-block">
     <div class="download">
       <div class="downloadcontent">
-        <img src="../assets/image/erweima.png" alt="" />
+        <img src="../../assets/image/erweima.png" alt="" />
         <div class="box">
           <div class="headline">下载稀土掘金APP</div>
           <div class="footline">一个帮助开发者成长的社区</div>

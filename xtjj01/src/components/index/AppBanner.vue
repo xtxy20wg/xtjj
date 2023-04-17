@@ -1,10 +1,10 @@
 <template>
   <div class="banner-block" :class="close ? 'none' : ''">
     <div class="banner">
-      <img src="../assets/image/guanggao1.webp" alt="" />
+      <img src="../../assets/image/guanggao1.webp" alt="" />
       <div class="ctrl-box">
         <div class="" @click="closefn()">
-          <img src="../assets/image/close.png" alt="" />
+          <img src="../../assets/image/close.png" alt="" />
         </div>
 
         <span class="label">
@@ -21,7 +21,6 @@ import { ref } from "vue";
 let close = ref(false);
 function closefn() {
   close.value = true;
-  console.log(close);
 }
 </script>
 
