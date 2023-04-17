@@ -97,13 +97,10 @@
             <li><span>系统通知</span></li>
           </ul>
         </li>
-<<<<<<< HEAD
 
         <li><img src="../assets/image/touxiang.awebp" alt="" class="tx" /></li>
         
 
-=======
->>>>>>> ccf5d997b6d802a5922dce59e1859f7111f25aa8
         <li>
           <img
             src="../assets/image/touxiang.awebp"
@@ -192,10 +189,6 @@
             </div>
           </div>
         </li>
-<<<<<<< HEAD
-
-=======
->>>>>>> ccf5d997b6d802a5922dce59e1859f7111f25aa8
       </ul>
     </div>
   </header>
