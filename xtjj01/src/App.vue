@@ -1,10 +1,9 @@
 <template>
   <router-view>
+    <AppForpassword/>
     <!-- 暂时位于home下 -->
     <!-- <AppHome /> -->
     <!-- <AppUserinfo /> -->
-
-    <AppForpassword/>
   </router-view>
 
 </template>
